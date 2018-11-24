@@ -1,14 +1,12 @@
 var path = require("path");
-var webpack = require("webpack");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
-    upload: "./src/upload.js"
+    index: "/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name]-bundle.js"
+    path: "/",
+    filename: "user-bundle.js"
   },
   module: {
     rules: [
@@ -24,10 +22,5 @@ module.exports = {
         use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      ReactTable: "react-table"
-    })
-  ]
+  }
 };

@@ -2,11 +2,12 @@
   "name": "react-render-user-components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "server": "node server.js",
     "build": "webpack-cli --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack-cli --watch --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,16 +16,23 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "linkfs": "^2.1.0",
+    "memfs": "^2.14.0",
+    "memory-fs": "^0.4.1",
     "promise-polyfill": "8.1.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-live": "^1.12.0",
-    "react-table": "^6.8.6"
+    "react-table": "^6.8.6",
+    "unionfs": "^3.0.2",
+    "webpack": "^4.26.0"
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.2"
