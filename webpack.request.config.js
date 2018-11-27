@@ -2,7 +2,7 @@ var path = require("path");
 module.exports = {
   mode: "development",
   entry: {
-    index: "/index.js",
+    index: "/index.js"
   },
   output: {
     path: "/",
@@ -14,7 +14,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/env", "@babel/react"]
+          }
         }
       },
       {
